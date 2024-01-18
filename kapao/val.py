@@ -68,9 +68,10 @@ def post_process_batch(data, imgs, paths, shapes, person_dets, kp_dets,
             if data['use_kp_dets'] and nkp:
                 mask = scores > data['conf_thres_kp_person']
                 poses_mask = poses[mask]
-
+                imgss = imgs.clone()
+                kpds = kpd.clone()
                 if len(poses_mask):
-                    kpd[:, :4] = scale_coords(imgs[si].shape[1:], kpd[:, :4], shape)
+                    kpd[:, :4] = scale_coords(imgss[si].shape[1:], kpds[:, :4], shape)
                     kpd = kpd[:, :6].cpu()
 
                     for x1, y1, x2, y2, conf, cls in kpd:
