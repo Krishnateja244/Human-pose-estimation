@@ -14,3 +14,11 @@ Our work is based on the research of:
     year = {2018}
 }
 ```
+```
+@article{mcnally2021kapao,
+  title={Rethinking Keypoint Representations: Modeling Keypoints and Poses as Objects for Multi-Person Human Pose Estimation},
+  author={McNally, William and Vats, Kanav and Wong, Alexander and McPhee, John},
+  journal={arXiv preprint arXiv:2111.08557},
+  year={2021}
+}
+```
